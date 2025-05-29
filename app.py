@@ -11,6 +11,7 @@ material = st.selectbox("Select Material", df["Material"].unique())
 area = st.number_input("Surface Area (m²)", min_value=0.0, step=0.1)
 thickness = st.number_input("Thickness (m)", min_value=0.0, step=0.01)
 
+
 if st.button("Calculate"):
     result = calculate_embodied_carbon(df, material, area, thickness)
     st.write(f"Embodied Carbon: {result} kg CO2e")
